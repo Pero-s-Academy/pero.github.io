@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignments - Pero's Academy</title>
+    <title>Welcome to Pero's Academy</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; color: #333; }
-        header { background-color: #007BFF; color: #FFFFFF; padding: 10px 0; text-align: center; }
-        h1 { margin: 0; }
+        header, .callout { background-color: #007BFF; color: #FFFFFF; padding: 20px; text-align: center; }
+        h1, h2, h3 { margin: 0; }
         nav { text-align: center; margin-top: 20px; }
-        nav a { color: #FFFFFF; text-decoration: none; background-color: #006BDD; padding: 10px 15px; border-radius: 5px; }
-        nav a:hover { background-color: #0056A3; }
-        .content { margin-top: 20px; }
-        .reference-link { margin-top: 20px; }
-        .reference-link a { color: #007BFF; text-decoration: none; }
-        .reference-link a:hover { text-decoration: underline; }
+        nav a, .callout a { color: #FFFFFF; text-decoration: none; background-color: #006BDD; padding: 10px 15px; border-radius: 5px; }
+        nav a:hover, .callout a:hover { background-color: #0056A3; }
+        .content, .enrollment-section { margin-top: 20px; }
+        .quote { font-style: italic; margin: 20px 0; }
+        .reference-link a, .content a { color: #007BFF; text-decoration: none; }
+        .reference-link a:hover, .content a:hover { text-decoration: underline; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
     </style>
 </head>
 <body>
     <header>
         <h1>Welcome to Pero's Academy</h1>
+        <p>Empowering the Next Generation of Innovators</p>
     </header>
 
     <nav>
@@ -28,11 +32,57 @@
     </nav>
 
     <div class="content">
-        <p>This is the main page of Pero's Academy. Use the navigation above to access the assignments page and other resources.</p>
+        <h2>About Us</h2>
+        <p>Pero's Academy is a beacon for pioneering education in technology and innovation. We foster an environment where creativity meets technology, equipping our students with the skills needed to excel in the modern tech landscape.</p>
+
+        <h3>Our Mission</h3>
+        <p>To cultivate a diverse community of learners and innovators who are ready to tackle complex challenges and make meaningful contributions to the world of technology.</p>
+
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li>State-of-the-art curriculum tailored to real-world applications.</li>
+            <li>Hands-on projects that foster practical learning and innovation.</li>
+            <li>Expert faculty with extensive industry experience.</li>
+            <li>Collaborative learning environment with a focus on peer-to-peer learning.</li>
+        </ul>
+
+        <blockquote class="quote">
+            "Education is the most powerful weapon which you can use to change the world." - Nelson Mandela
+        </blockquote>
+    </div>
+
+    <div class="enrollment-section">
+        <h2>Enrollment for Q2 Curriculum Now Open</h2>
+        <p>We are excited to announce that applications for our Q2 curriculum and enrollments are now being accepted! Secure your spot and be part of the change.</p>
+        
+        <table>
+            <tr>
+                <th>Program</th>
+                <th>Duration</th>
+                <th>Start Date</th>
+                <th>Application Deadline</th>
+            </tr>
+            <tr>
+                <td>Advanced Software Development</td>
+                <td>6 Months</td>
+                <td>April 15</td>
+                <td>March 31</td>
+            </tr>
+            <tr>
+                <td>Cybersecurity Essentials</td>
+                <td>4 Months</td>
+                <td>April 15</td>
+                <td>March 31</td>
+            </tr>
+            <!-- Add more programs as needed -->
+        </table>
+
+        <div class="callout">
+            <p>Don't miss this opportunity to advance your career with Pero's Academy. <a href="enroll.html">Apply Now!</a></p>
+        </div>
     </div>
 
     <div class="reference-link">
         <p>Need help with your assignments? Check out the <a href="ref_key.html">Reference Key</a> page.</p>
     </div>
-</body>
-</html>
+</body
