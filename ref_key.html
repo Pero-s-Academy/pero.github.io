@@ -1,5 +1,85 @@
-<!DOCTYPE html><html><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Welcome to Pero's Academy</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header-container, .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+        .header-container {
+            position: relative; /* Make the header container the positioning context for the nav container */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #007BFF;
+            color: white;
+        }
+        .hamburger {
+            cursor: pointer;
+        }
+        .bar {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            margin: 6px 0;
+        }
+        .nav-container {
+            display: none;
+            position: absolute;
+            background-color: #006BDD;
+            width: 100%; /* Ensure it spans the entire width of the header container */
+            top: 100%; /* Position it right below the header container */
+            left: 0; /* Align it to the left edge of the header container */
+            border-radius: 0 0 10px 10px;
+            z-index: 1000; /* Ensure it sits above other content */
+        }
+        .nav-container a, .button {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .nav-container a:hover, .button:hover {
+            background-color: #0056A3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #007BFF;
+            color: white;
+            width: 100%;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
     body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; color: #333; }
     h1 { color: #007BFF; }
     h2, h3 { color: #006BDD; }
