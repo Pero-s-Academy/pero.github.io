@@ -10,87 +10,71 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        }
+        .header-container, .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
         }
         .header-container {
-            width: 80%;
-            background-color: #007BFF;
-            color: white;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background-color: #007BFF;
+            color: white;
         }
-        header h1 {
-            margin: 0;
+        .hamburger {
+            cursor: pointer;
+        }
+        .bar {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            margin: 6px 0;
         }
         .nav-container {
-            display: none; /* Hide initially */
+            display: none;
             position: absolute;
-            top: 100%;
-            right: 10%;
             background-color: #006BDD;
+            right: 10%;
+            top: 100%;
             border-radius: 0 0 10px 10px;
         }
         .nav-container a {
-            display: block;
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
-            text-align: center;
+            display: block;
+            padding: 10px;
         }
         .nav-container a:hover {
             background-color: #0056A3;
         }
-        .hamburger {
-            display: flex;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 5px 0;
-        }
-        .bar {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-            margin: 3px 0;
-            border-radius: 2px;
-        }
-        .container {
-            width: 80%;
-            background-color: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-sizing: border-box;
-        }
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Hover Effects */
-        a, .button {
-            transition: background-color 0.3s, color 0.3s;
-        }
-        a:hover, .button:hover {
-            background-color: #004c8c; /* Darker shade for hover */
-            color: #ffffff;
-        }
-        /* Footer Styles */
-        .footer {
+        table {
             width: 100%;
-            background-color: #0056A3;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #007BFF;
             color: white;
+        }
+        footer {
             text-align: center;
             padding: 20px;
-            font-size: 14px;
+            background-color: #007BFF;
+            color: white;
+            width: 100%;
         }
     </style>
 </head>
 <body>
+    <!-- Header and Navigation -->
     <div class="header-container">
         <header>
             <h1>Welcome to Pero's Academy</h1>
@@ -110,35 +94,67 @@
         </div>
     </div>
 
-    <div class="container">
-        <!-- Your existing content -->
-    </div>
+<!-- Main Content -->
+<div class="container">
+    <!-- About Us Section -->
+    <h2>About Us</h2>
+    <p>Pero's Academy is a beacon for pioneering education in technology and innovation, offering cutting-edge courses designed to empower students with the skills needed to excel in the fast-paced tech industry. Our mission is to create a learning environment that bridges the gap between traditional education and the demands of the 21st-century workplace.</p>
 
-    <div class="footer">
-        © 2024 Pero's Academy | <a href="#" style="color: #FFD700;">Terms of Service</a> | <a href="#" style="color: #FFD700;">Privacy Policy</a>
+    <!-- Why Choose Us Section -->
+    <h2>Why Choose Us?</h2>
+    <ul>
+        <li>State-of-the-art curriculum tailored to real-world applications, ensuring that what you learn is immediately applicable in your career.</li>
+        <li>Hands-on projects that foster practical learning and innovation, allowing you to work on real-world problems and develop solutions that matter.</li>
+        <li>Expert faculty with extensive industry experience, providing you with insights from those who have succeeded in the field.</li>
+        <li>Collaborative learning environment with a focus on peer-to-peer learning, helping you to grow through teamwork and shared experiences.</li>
+    </ul>
+
+    <!-- Inspirational Quote Section -->
+    <p class="quote">"Education is the most powerful weapon which you can use to change the world." - Nelson Mandela</p>
+    
+    <!-- Enrollment Information Section -->
+    <h2>Enrollment for Q2 Curriculum Now Open</h2>
+    <p>We are excited to announce that applications for our Q2 curriculum and enrollments are now being accepted! Secure your spot and be part of the change. Join a community of like-minded individuals driven to make an impact in the tech world.</p>
+
+    <!-- Programs Table -->
+    <table>
+        <tr>
+            <th>Program</th>
+            <th>Duration</th>
+            <th>Start Date</th>
+            <th>Application Deadline</th>
+        </tr>
+        <tr>
+            <td>Advanced Software Development</td>
+            <td>6 Months</td>
+            <td>April 15</td>
+            <td>March 31</td>
+        </tr>
+        <tr>
+            <td>Cybersecurity Essentials</td>
+            <td>4 Months</td>
+            <td>April 15</td>
+            <td>March 31</td>
+        </tr>
+    </table>
+    
+    <!-- Call to Action for Enrollment -->
+    <div class="callout">
+        <p>Don't miss this opportunity to advance your career with Pero's Academy. <a href="enroll.html">Apply Now!</a></p>
     </div>
+</div>
+
+
+    <!-- Footer -->
+    <footer>
+        © 2024 Pero's Academy. All rights reserved.
+    </footer>
 
     <script>
         function toggleNav() {
             var nav = document.getElementById("navContainer");
             nav.style.display = nav.style.display === "block" ? "none" : "block";
         }
-
-        // Placeholder for form validation script
-        // Adapt as needed based on your form's structure and IDs
-        document.getElementById('enrollmentForm').addEventListener('submit', function(event) {
-            var isValid = true; // Assume the form is valid initially
-
-            var nameInput = document.getElementById('name');
-            if (!nameInput.value.trim()) {
-                alert('Name is required.');
-                isValid = false;
-            }
-
-            if (!isValid) {
-                event.preventDefault();
-            }
-        });
     </script>
 </body>
 </html>
