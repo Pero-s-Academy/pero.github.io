@@ -19,6 +19,7 @@
             border-radius: 10px;
         }
         .header-container {
+            position: relative; /* Make the header container the positioning context for the nav container */
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -38,9 +39,11 @@
             display: none;
             position: absolute;
             background-color: #006BDD;
-            right: 10%;
-            top: calc(100% + 5px);
+            width: 100%; /* Ensure it spans the entire width of the header container */
+            top: 100%; /* Position it right below the header container */
+            left: 0; /* Align it to the left edge of the header container */
             border-radius: 0 0 10px 10px;
+            z-index: 1000; /* Ensure it sits above other content */
         }
         .nav-container a, .button {
             color: white;
