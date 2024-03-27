@@ -1,3 +1,8 @@
+
+To incorporate a dropdown navigation menu and ensure the header text is white, you'll need to update your HTML structure and CSS. This involves adding some JavaScript to handle the dropdown functionality. Here's an enhanced version of your index.html:
+
+html
+Copy code
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +22,7 @@
         header {
             width: 100%;
             background-color: #007BFF;
-            color: black;
+            color: white; /* Changed to white */
             padding: 20px;
             text-align: center;
             margin-top: 20px;
@@ -31,9 +36,9 @@
             text-align: center;
             margin-top: 20px;
             border-radius: 10px;
-        }   
+        }
         .container {
-            width: 80%; /* Adjust the width as needed */
+            width: 80%;
             margin: 20px 0;
             background-color: white;
             padding: 20px;
@@ -69,6 +74,28 @@
         a:hover {
             text-decoration: underline;
         }
+        /* Dropdown Menu CSS */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color: #f1f1f1}
+        .dropdown:hover .dropdown-content {display: block;}
+        .dropdown:hover .dropbtn {background-color: #3e8e41;}
     </style>
 </head>
 <body>
@@ -76,12 +103,17 @@
         <h1>Welcome to Pero's Academy</h1>
     </header>
 
+    <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+            <a href="assignments.html">Assignments</a>
+            <!-- Add more navigation links as needed -->
+        </div>
+    </div>
+
     <div class="container">
         <h2>About Us</h2>
         <p>Pero's Academy is a beacon for pioneering education in technology and innovation. We foster an environment where creativity meets technology, equipping our students with the skills needed to excel in the modern tech landscape.</p>
-
-        <h3>Our Mission</h3>
-        <p>To cultivate a diverse community of learners and innovators who are ready to tackle complex challenges and make meaningful contributions to the world of technology.</p>
 
         <h2>Why Choose Us?</h2>
         <ul>
