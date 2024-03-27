@@ -10,41 +10,60 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .header-container {
-            width: 100%;
+            width: 80%;
             background-color: #007BFF;
             color: white;
-            padding: 10px 20px; /* Adjust padding as needed */
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
             display: flex;
-            justify-content: space-between; /* Aligns items on the main-axis */
-            align-items: center; /* Aligns items on the cross-axis */
-            box-sizing: border-box; /* Ensures padding does not add to the total width */
+            justify-content: space-between;
+            align-items: center;
         }
         header h1 {
             margin: 0;
         }
         .nav-container {
-            display: flex;
-            justify-content: center; /* Center navigation links */
-            padding: 10px 0;
-            background-color: #006BDD; /* Slightly darker shade for contrast */
+            display: none; /* Hide initially */
+            position: absolute;
+            top: 100%;
+            right: 10%;
+            background-color: #006BDD;
+            border-radius: 0 0 10px 10px;
         }
         .nav-container a {
+            display: block;
             color: white;
             text-decoration: none;
-            margin: 0 15px; /* Adds horizontal spacing between nav items */
-            padding: 5px 10px;
-            border-radius: 5px;
+            padding: 10px 20px;
+            text-align: center;
         }
         .nav-container a:hover {
             background-color: #0056A3;
         }
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px 0;
+        }
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+            border-radius: 2px;
+        }
         .container {
             width: 80%;
-            margin: 20px auto; /* Centers the container */
             background-color: white;
             padding: 20px;
+            margin: 20px 0;
             border-radius: 10px;
             box-sizing: border-box;
         }
@@ -55,7 +74,12 @@
         <header>
             <h1>Welcome to Pero's Academy</h1>
         </header>
-        <div class="nav-container">
+        <div class="hamburger" onclick="toggleNav()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav-container" id="navContainer">
             <a href="assignments.html">Assignments</a>
             <a href="ref_key.html">Reference Key</a>
             <a href="contact.html">Contact</a>
@@ -107,5 +131,11 @@
             <p>Don't miss this opportunity to advance your career with Pero's Academy. <a href="enroll.html">Apply Now!</a></p>
         </div>
     </div>
+    <script>
+        function toggleNav() {
+            var nav = document.getElementById("navContainer");
+            nav.style.display = nav.style.display === "block" ? "none" : "block";
+        }
+    </script>
 </body>
 </html>
