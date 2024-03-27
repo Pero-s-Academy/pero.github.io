@@ -199,12 +199,17 @@
     </footer>
 
     <!-- Toggle Navigation Script -->
-    <script>
-        function toggleNav() {
-            var nav = document.getElementById("navContainer");
-            nav.style.display = nav.style.display === "block" ? "none" : "block";
+<script>
+    function toggleNav() {
+        var nav = document.getElementById("navContainer");
+        if (nav.style.display === "block") {
+            nav.style.display = "none";
+        } else {
+            nav.style.display = "block";
         }
-    </script>
+    }
+</script>
+
                     
 </body>
 </html>
