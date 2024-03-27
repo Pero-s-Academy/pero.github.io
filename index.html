@@ -2,23 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Welcome to Pero's Academy</title>
     <style>
-        
-        a {
-            transition: background-color 0.3s, color 0.3s;
-        }
-        
-        a:hover {
-            background-color: #004c8c; /* Adjust color based on your design */
-            color: #ffffff;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-                body {
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -38,7 +25,6 @@
             background-color: #007BFF;
             color: white;
         }
-        
         .hamburger {
             cursor: pointer;
         }
@@ -53,24 +39,17 @@
             position: absolute;
             background-color: #006BDD;
             right: 10%;
-            top: 100%;
+            top: calc(100% + 5px);
             border-radius: 0 0 10px 10px;
         }
-        .button {
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .button:hover {
-            background-color: #004c8c; /* Adjust color based on your design */
-            color: #ffffff;
-        }
-        .nav-container a {
+        .nav-container a, .button {
             color: white;
             text-decoration: none;
             display: block;
             padding: 10px;
+            transition: background-color 0.3s, color 0.3s;
         }
-        .nav-container a:hover {
+        .nav-container a:hover, .button:hover {
             background-color: #0056A3;
         }
         table {
@@ -92,6 +71,9 @@
             background-color: #007BFF;
             color: white;
             width: 100%;
+        }
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -116,79 +98,62 @@
         </div>
     </div>
 
-<!-- Main Content -->
-<div class="container">
-    <!-- About Us Section -->
-    <h2>About Us</h2>
-    <p>Pero's Academy is a beacon for pioneering education in technology and innovation, offering cutting-edge courses designed to empower students with the skills needed to excel in the fast-paced tech industry. Our mission is to create a learning environment that bridges the gap between traditional education and the demands of the 21st-century workplace.</p>
+    <!-- Main Content -->
+    <div class="container">
+        <h2>About Us</h2>
+        <p>Pero's Academy is a beacon for pioneering education in technology and innovation, offering cutting-edge courses designed to empower students with the skills needed to excel in the fast-paced tech industry. Our mission is to create a learning environment that bridges the gap between traditional education and the demands of the 21st-century workplace.</p>
 
-    <!-- Why Choose Us Section -->
-    <h2>Why Choose Us?</h2>
-    <ul>
-        <li>State-of-the-art curriculum tailored to real-world applications, ensuring that what you learn is immediately applicable in your career.</li>
-        <li>Hands-on projects that foster practical learning and innovation, allowing you to work on real-world problems and develop solutions that matter.</li>
-        <li>Expert faculty with extensive industry experience, providing you with insights from those who have succeeded in the field.</li>
-        <li>Collaborative learning environment with a focus on peer-to-peer learning, helping you to grow through teamwork and shared experiences.</li>
-    </ul>
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li>State-of-the-art curriculum tailored to real-world applications, ensuring that what you learn is immediately applicable in your career.</li>
+            <li>Hands-on projects that foster practical learning and innovation, allowing you to work on real-world problems and develop solutions that matter.</li>
+            <li>Expert faculty with extensive industry experience, providing you with insights from those who have succeeded in the field.</li>
+            <li>Collaborative learning environment with a focus on peer-to-peer learning, helping you to grow through teamwork and shared experiences.</li>
+        </ul>
 
-    <!-- Inspirational Quote Section -->
-    <p class="quote">"Education is the most powerful weapon which you can use to change the world." - Nelson Mandela</p>
-    
-    <!-- Enrollment Information Section -->
-    <h2>Enrollment for Q2 Curriculum Now Open</h2>
-    <p>We are excited to announce that applications for our Q2 curriculum and enrollments are now being accepted! Secure your spot and be part of the change. Join a community of like-minded individuals driven to make an impact in the tech world.</p>
+        <p class="quote">"Education is the most powerful weapon which you can use to change the world." - Nelson Mandela</p>
 
-    <!-- Programs Table -->
-    <table>
-        <tr>
-            <th>Program</th>
-            <th>Duration</th>
-            <th>Start Date</th>
-            <th>Application Deadline</th>
-        </tr>
-        <tr>
-            <td>Advanced Software Development</td>
-            <td>6 Months</td>
-            <td>April 15</td>
-            <td>March 31</td>
-        </tr>
-        <tr>
-            <td>Cybersecurity Essentials</td>
-            <td>4 Months</td>
-            <td>April 15</td>
-            <td>March 31</td>
-        </tr>
-    </table>
-    
-    <!-- Call to Action for Enrollment -->
-    <div class="callout">
-        <p>Don't miss this opportunity to advance your career with Pero's Academy. <a href="enroll.html">Apply Now!</a></p>
+        <h2>Enrollment for Q2 Curriculum Now Open</h2>
+        <p>We are excited to announce that applications for our Q2 curriculum and enrollments are now being accepted! Secure your spot and be part of the change. Join a community of like-minded individuals driven to make an impact in the tech world.</p>
+
+        <table>
+            <tr>
+                <th>Program</th>
+                <th>Duration</th>
+                <th>Start Date</th>
+                <th>Application Deadline</th>
+            </tr>
+            <tr>
+                <td>Advanced Software Development</td>
+                <td>6 Months</td>
+                <td>April 15</td>
+                <td>March 31</td>
+            </tr>
+            <tr>
+                <td>Cybersecurity Essentials</td>
+                <td>4 Months</td>
+                <td>April 15</td>
+                <td>March 31</td>
+            </tr>
+        </table>
+
+        <div class="callout">
+            <p>Don't miss this opportunity to advance your career with Pero's Academy. <a href="enroll.html">Apply Now!</a></p>
+        </div>
     </div>
-</div>
-
 
     <!-- Footer -->
     <footer>
         © 2024 Pero's Academy. All rights reserved.
     </footer>
-    
-<script>
-document.getElementById('enrollmentForm').addEventListener('submit', function(event) {
-    var isValid = true; // Assume the form is valid initially
 
-    // Example validation: Check if a text input, like 'name', is empty
-    var nameInput = document.getElementById('name');
-    if (!nameInput.value.trim()) {
-        alert('Name is required.');
-        isValid = false;
-    }
-
-    // Prevent form submission if validation fails
-    if (!isValid) {
-        event.preventDefault();
-    }
-});
-</script>
-
+    <!-- Toggle Navigation Script -->
+    <script>
+        function toggleNav() {
+            var nav = document.getElementById("navContainer");
+            nav.style.display = nav.style.display === "block" ? "none" : "block";
+        }
+    </script>
 </body>
+
 </html>
