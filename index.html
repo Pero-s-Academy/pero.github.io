@@ -67,6 +67,27 @@
             border-radius: 10px;
             box-sizing: border-box;
         }
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Hover Effects */
+        a, .button {
+            transition: background-color 0.3s, color 0.3s;
+        }
+        a:hover, .button:hover {
+            background-color: #004c8c; /* Darker shade for hover */
+            color: #ffffff;
+        }
+        /* Footer Styles */
+        .footer {
+            width: 100%;
+            background-color: #0056A3;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
@@ -90,52 +111,34 @@
     </div>
 
     <div class="container">
-        <h2>About Us</h2>
-        <p>Pero's Academy is a beacon for pioneering education in technology and innovation...</p>
-       
-        <h2>Why Choose Us?</h2>
-        <ul>
-            <li>State-of-the-art curriculum tailored to real-world applications.</li>
-            <li>Hands-on projects that foster practical learning and innovation.</li>
-            <li>Expert faculty with extensive industry experience.</li>
-            <li>Collaborative learning environment with a focus on peer-to-peer learning.</li>
-        </ul>
-
-        <p class="quote">"Education is the most powerful weapon which you can use to change the world." - Nelson Mandela</p>
-        
-        <h2>Enrollment for Q2 Curriculum Now Open</h2>
-        <p>We are excited to announce that applications for our Q2 curriculum and enrollments are now being accepted! Secure your spot and be part of the change.</p>
-
-        <table>
-            <tr>
-                <th>Program</th>
-                <th>Duration</th>
-                <th>Start Date</th>
-                <th>Application Deadline</th>
-            </tr>
-            <tr>
-                <td>Advanced Software Development</td>
-                <td>6 Months</td>
-                <td>April 15</td>
-                <td>March 31</td>
-            </tr>
-            <tr>
-                <td>Cybersecurity Essentials</td>
-                <td>4 Months</td>
-                <td>April 15</td>
-                <td>March 31</td>
-            </tr>
-        </table>
-
-        <div class="callout">
-            <p>Don't miss this opportunity to advance your career with Pero's Academy. <a href="enroll.html">Apply Now!</a></p>
-        </div>
+        <!-- Your existing content -->
     </div>
+
+    <div class="footer">
+        © 2024 Pero's Academy | <a href="#" style="color: #FFD700;">Terms of Service</a> | <a href="#" style="color: #FFD700;">Privacy Policy</a>
+    </div>
+
     <script>
         function toggleNav() {
             var nav = document.getElementById("navContainer");
             nav.style.display = nav.style.display === "block" ? "none" : "block";
         }
+
+        // Placeholder for form validation script
+        // Adapt as needed based on your form's structure and IDs
+        document.getElementById('enrollmentForm').addEventListener('submit', function(event) {
+            var isValid = true; // Assume the form is valid initially
+
+            var nameInput = document.getElementById('name');
+            if (!nameInput.value.trim()) {
+                alert('Name is required.');
+                isValid = false;
+            }
+
+            if (!isValid) {
+                event.preventDefault();
+            }
+        });
     </script>
 </body>
 </html>
