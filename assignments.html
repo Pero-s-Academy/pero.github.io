@@ -19,7 +19,7 @@
             border-radius: 10px;
         }
         .header-container {
-            position: relative; /* Make the header container the positioning context for the nav container */
+            position: relative;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -39,11 +39,11 @@
             display: none;
             position: absolute;
             background-color: #006BDD;
-            width: 100%; /* Ensure it spans the entire width of the header container */
-            top: 100%; /* Position it right below the header container */
-            left: 0; /* Align it to the left edge of the header container */
+            width: 100%;
+            top: 100%;
+            left: 0;
             border-radius: 0 0 10px 10px;
-            z-index: 1000; /* Ensure it sits above other content */
+            z-index: 1000;
         }
         .nav-container a, .button {
             color: white;
@@ -78,6 +78,32 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* 3D Buttons CSS */
+        .categories-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .category-button {
+            display: inline-block;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            box-shadow: 0 4px #0056A3;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .category-button:hover, .category-button:active {
+            background-color: #0056A3;
+            box-shadow: 0 2px #003D7A;
+            transform: translateY(2px);
+        }
     </style>
 </head>
 <body>
@@ -102,52 +128,15 @@
     </div>
 
     <div class="body">
-    <header>
-        <h1>Welcome to Pero's Academy Assignments</h1>
-    </header>
+        <header>
+            <h1>Welcome to Pero's Academy Assignments</h1>
+        </header>
+        <!-- Your content goes here -->
+    </div>
+    <!-- Your footer and scripts go here -->
+</body>
+</html>
 
-    <div class="content">
-        <p>🚀 Welcome to the Assignments Repository for Pero's Skunkworks. This repository serves as the central hub for all assignments, projects, and collaborative efforts undertaken by our apprentices.</p>
-        
-        <h2>🌟 Assignment Categories</h2>
-        <table>
-            <tr>
-                <th>Assignment Categories</th>
-            </tr>
-            <tr>
-                <td><a href="#innovation-projects">🛠 Innovation Projects</a></td>
-            </tr>
-            <tr>
-                <td><a href="#hackathons">⚡ Hackathons</a></td>
-            </tr>
-            <tr>
-                <td><a href="#collaborations">🤝 Cross-Disciplinary Collaborations</a></td>
-            </tr>
-            <tr>
-                <td><a href="#research">📝 Research & Patents</a></td>
-            </tr>
-            <tr>
-                <td><a href="#evangelism">📢 Technology Evangelism</a></td>
-            </tr>
-            <tr>
-                <td><a href="#open-source">💻 Open Source Contributions</a></td>
-            </tr>
-            <tr>
-                <td><a href="#customer-solutions">🎯 Customer-Centric Solutions</a></td>
-            </tr>
-            <tr>
-                <td><a href="#emerging-tech">🔍 Emerging Tech Exploration</a></td>
-            </tr>
-            <tr>
-                <td><a href="#sustainability">🌱 Sustainability Projects</a></td>
-            </tr>
-            <tr>
-                <td><a href="#mentorship">👥 Mentorship & Leadership</a></td>
-            </tr>
-            <tr>
-            <td><a href="ref_key.html">🔑 Reference Key</a></td>
-            </tr>
-        </table>
         
         <h2>📚 Current Assignments</h2>
         <table>
