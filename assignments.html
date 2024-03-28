@@ -74,35 +74,11 @@
             background-color: #007BFF;
             color: white;
             width: 100%;
+            margin-top: 20px;
+            border-radius: 0 0 10px 10px;
         }
         html {
             scroll-behavior: smooth;
-        }
-
-        /* 3D Buttons CSS */
-        .categories-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 20px;
-        }
-
-        .category-button {
-            display: inline-block;
-            background-color: #007BFF;
-            color: white;
-            text-decoration: none;
-            padding: 15px 30px;
-            border-radius: 5px;
-            box-shadow: 0 4px #0056A3;
-            margin: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .category-button:hover, .category-button:active {
-            background-color: #0056A3;
-            box-shadow: 0 2px #003D7A;
-            transform: translateY(2px);
         }
     </style>
 </head>
@@ -127,78 +103,32 @@
         </div>
     </div>
 
-    <div class="body">
+    <!-- Main Content -->
+    <div class="container">
         <header>
-            <h1>Welcome to Pero's Academy Assignments</h1>
+            <h2>Welcome to Pero's Academy Assignments</h2>
         </header>
-        <!-- Your content goes here -->
-    </div>
-    <!-- Your footer and scripts go here -->
-</body>
-</html>
-
-        
-        <h2>📚 Current Assignments</h2>
+        <h3>📚 Current Assignments</h3>
         <table>
             <tr>
                 <th>Assignment Name</th>
                 <th>Link</th>
             </tr>
-            <tr>
-                <td>Automation and (CI/CD) Assignment</td>
-                <td><a href="https://github.com/Pero-s-Academy/Assignments/tree/4807957c1aed5f89f41b35f579892fe566d12bce/Group%20Activities/Automation%20and%20(CICD)%20Assignment" target="_blank">View on GitHub</a></td>
-            </tr>
-            <tr>
-                <td>Introduction to Go (Golang) Video Assignment</td>
-                <td><a href="https://github.com/Pero-s-Academy/Assignments/tree/4807957c1aed5f89f41b35f579892fe566d12bce/Introduction%20to%20Go%20(Golang)%20Video%20Assignment" target="_blank">View on GitHub</a></td>
-            </tr>
-            <tr>
-                <td>Microsoft-Oriented Course Development Assignment</td>
-                <td><a href="https://github.com/Pero-s-Academy/Assignments/tree/4807957c1aed5f89f41b35f579892fe566d12bce/Microsoft-Oriented-Course-Development-Assignment" target="_blank">View on GitHub</a></td>
-            </tr>
-            <tr>
-                <td>Pero's Badge Quest: 25 Badges in 12 Weeks Assignment</td>
-                <td><a href="https://github.com/Pero-s-Academy/Assignments/tree/4807957c1aed5f89f41b35f579892fe566d12bce/Pero's%20Badge%20Quest_25%20Badges%20in%2012%20weeks%20Assignment" target="_blank">View on GitHub</a></td>
-            </tr>
-            <tr>
-                <td>Cybersecurity Threat Analysis Assignment</td>
-                <td><a href="https://github.com/Pero-s-Academy/Assignments/tree/4807957c1aed5f89f41b35f579892fe566d12bce/cybersecurity-threat-analysis-assignment" target="_blank">View on GitHub</a></td>
-            </tr>
-            <tr>
-                <td>Your GitHub.io Professional Site Assignment</td>
-                <td><a href="https://github.com/Pero-s-Academy/Assignments/tree/4807957c1aed5f89f41b35f579892fe566d12bce/your_github.io_professional_site_assignment" target="_blank">View on GitHub</a></td>
-            </tr>
-            <tr>
-                <td>Business Model Innovation for 4Levels - A Strategic Analysis Project</td>
-                <td><a href="https://github.com/Pero-s-Academy/Assignments/tree/3c13b7cb154dceb47d1219a6ae92782a204962f5/Business%20Model%20Innovation%20for%204Levels%20-%20A%20Strategic%20Analysis%20Project" target="_blank">View on GitHub</a></td>
-            </tr>
-            <tr>
-                <td>Cyber Retaliator Solutions Strategy Development Project</td>
-                <td><a href="https://github.com/Pero-s-Academy/Assignments/tree/3c13b7cb154dceb47d1219a6ae92782a204962f5/Cyber%20Retaliator%20Solutions%20Strategy%20Development%20Project" target="_blank">View on GitHub</a></td>
-            </tr>
-            <tr>
-                <td>Strategic Business Expansion for Skunkworks.africa - An Analytical Perspective</td>
-                <td><a href="https://github.com/Pero-s-Academy/Assignments/tree/3c13b7cb154dceb47d1219a6ae92782a204962f5/Strategic%20
+            <!-- Add assignment rows here -->
         </table>
     </div>
 
-        <!-- Footer -->
+    <!-- Footer -->
     <footer>
         © 2024 Pero's Academy. All rights reserved.
     </footer>
 
     <!-- Toggle Navigation Script -->
-<script>
-    function toggleNav() {
-        var nav = document.getElementById("navContainer");
-        if (nav.style.display === "block") {
-            nav.style.display = "none";
-        } else {
-            nav.style.display = "block";
+    <script>
+        function toggleNav() {
+            var nav = document.getElementById("navContainer");
+            nav.style.display = nav.style.display === "block" ? "none" : "block";
         }
-    }
-</script>
-
-                    
+    </script>
 </body>
 </html>
