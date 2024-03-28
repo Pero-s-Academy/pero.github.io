@@ -6,28 +6,35 @@
     <title>Welcome to Pero's Academy</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            line-height: 1.6;
         }
         .header-container, .container {
-            width: 80%;
+            max-width: 1100px;
             margin: 20px auto;
             padding: 20px;
             background-color: #fff;
             border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         .header-container {
-            position: relative; /* Make the header container the positioning context for the nav container */
+            position: relative;
             display: flex;
             justify-content: space-between;
             align-items: center;
             background-color: #007BFF;
             color: white;
+            border-radius: 10px 10px 0 0;
         }
         .hamburger {
             cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .hamburger:hover {
+            transform: scale(1.1);
         }
         .bar {
             width: 30px;
@@ -39,25 +46,27 @@
             display: none;
             position: absolute;
             background-color: #006BDD;
-            width: 100%; /* Ensure it spans the entire width of the header container */
-            top: 100%; /* Position it right below the header container */
-            left: 0; /* Align it to the left edge of the header container */
+            width: 100%;
+            top: 100%;
+            left: 0;
             border-radius: 0 0 10px 10px;
-            z-index: 1000; /* Ensure it sits above other content */
+            z-index: 1000;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
-        .nav-container a, .button {
+        .nav-container a {
             color: white;
             text-decoration: none;
             display: block;
             padding: 10px;
-            transition: background-color 0.3s, color 0.3s;
+            transition: background-color 0.3s;
         }
-        .nav-container a:hover, .button:hover {
+        .nav-container a:hover {
             background-color: #0056A3;
         }
         table {
             width: 100%;
             border-collapse: collapse;
+            margin-top: 20px;
         }
         th, td {
             border: 1px solid #dddddd;
@@ -74,9 +83,65 @@
             background-color: #007BFF;
             color: white;
             width: 100%;
+            border-radius: 0 0 10px 10px;
+            margin-top: 20px;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
         }
-        html {
-            scroll-behavior: smooth;
+        .callout {
+            background-color: #e9f5ff;
+            padding: 20px;
+            margin-top: 20px;
+            border-left: 5px solid #007BFF;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .callout:hover {
+            background-color: #d8eefb;
+            border-color: #0056A3;
+        }
+        .callout a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .callout a:hover {
+            text-decoration: underline;
+        }
+        .quote {
+            font-style: italic;
+            margin-top: 20px;
+        }
+        footer {
+    background-color: #2A2A2A;
+    color: #FFFFFF;
+    padding: 20px 0;
+    text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
+            text-align: center;
+        }
+        
+        .footer-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+        
+        .footer-links a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -100,8 +165,6 @@
             <a href="curriculums.html">Curriculums</a>
         </div>
     </div>
-
-    <!-- Main Content -->
     <div class="container">
         <h2>About Us</h2>
         <p>Pero's Academy is a beacon for pioneering education in technology and innovation, offering cutting-edge courses designed to empower students with the skills needed to excel in the fast-paced tech industry. Our mission is to create a learning environment that bridges the gap between traditional education and the demands of the 21st-century workplace.</p>
@@ -144,19 +207,34 @@
             <p>Don't miss this opportunity to advance your career with Pero's Academy. <a href="enroll.html">Apply Now!</a></p>
         </div>
     </div>
-
-    <!-- Footer -->
     <footer>
-        © 2024 Pero's Academy. All rights reserved.
+        <div class="footer-content">
+            <p>© 2024 Pero's Academy. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Use</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
     </footer>
-
-    <!-- Toggle Navigation Script -->
     <script>
         function toggleNav() {
             var nav = document.getElementById("navContainer");
-            nav.style.display = nav.style.display === "block" ? "none" : "block";
+            var style = window.getComputedStyle(nav);
+            var display = style.getPropertyValue('display');
+            nav.style.display = display === "block" ? "none" : "block";
         }
+
+        // Enhance the script to close the nav menu when clicking outside of it
+        document.addEventListener('click', function(event) {
+            var nav = document.getElementById("navContainer");
+            var clickInsideNav = nav.contains(event.target);
+            var clickOnHamburger = document.querySelector('.hamburger').contains(event.target);
+
+            if (!clickInsideNav && !clickOnHamburger && nav.style.display === 'block') {
+                nav.style.display = 'none';
+            }
+        });
     </script>
 </body>
-
 </html>
