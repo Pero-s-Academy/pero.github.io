@@ -64,6 +64,22 @@
         <h2 id="assignment-overview">Assignment Overview</h2>
         <table aria-describedby="assignment-overview">
             <!-- Table rows and data here -->
+            <tr>
+                <th>Assignment</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>Assignment 1</td>
+                <td id="assignment1-status"></td>
+            </tr>
+            <tr>
+                <td>Assignment 2</td>
+                <td id="assignment2-status"></td>
+            </tr>
+            <tr>
+                <td>Assignment 3</td>
+                <td id="assignment3-status"></td>
+            </tr>
         </table>
     </section>
 
@@ -92,7 +108,16 @@
     // JavaScript for dynamic year update and possibly other dynamic features
     document.getElementById('year').textContent = new Date().getFullYear();
     
-    // Add more JavaScript here for dynamic status updates, API calls, etc.
+    // Function to update assignment status
+    function updateAssignmentStatus(assignmentId, status) {
+        const statusElement = document.getElementById(assignmentId + '-status');
+        statusElement.textContent = status;
+    }
+    
+    // Example usage
+    updateAssignmentStatus('assignment1', 'Completed');
+    updateAssignmentStatus('assignment2', 'In Progress');
+    updateAssignmentStatus('assignment3', 'Not Started');
 </script>
 </body>
 </html>
