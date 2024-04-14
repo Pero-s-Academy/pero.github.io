@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Welcome to Pero's Academy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header-container">
+        <header>
+            <h1>Welcome to Pero's Academy</h1>
+        </header>
+        <div class="hamburger" onclick="toggleNav()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav-container" id="navContainer">
+            <a href="index.html">Home</a>
+            <a href="assignments.html">Assignments</a>
+            <a href="ref_key.html">Reference Key</a>
+            <a href="contact.html">Contact</a>
+            <a href="faculty.html">Faculty</a>
+            <a href="enrollment-form.html">Enrollment</a>
+            <a href="curriculums.html">Curriculums</a>
+        </div>
+    </div>
+    <!-- Script to handle the navigation toggle -->
+    <script>
+        function toggleNav() {
+            var nav = document.getElementById("navContainer");
+            var style = window.getComputedStyle(nav);
+            var display = style.getPropertyValue('display');
+            nav.style.display = display === "block" ? "none" : "block";
+        }
+    </script>
+    <!-- Main content goes here -->
