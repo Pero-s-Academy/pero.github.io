@@ -234,7 +234,21 @@
             if (!clickInsideNav && !clickOnHamburger && nav.style.display === 'block') {
                 nav.style.display = 'none';
             }
-        });
+        // Function to fetch and insert HTML from a file into a specified element
+        function fetchAndInsertHTML(elementId, filePath) {
+            fetch(filePath)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById(elementId).innerHTML = html;
+                })
+                .catch(error => {
+                    console.error('Failed to load ' + filePath, error);
+                });
+        }
+
+        // Load header and footer HTML through JavaScript
+        fetchAndInsertHTML('header', 'header.html');
+        fetchAndInsertHTML('footer', 'footer.html');
     </script>
 </body>
 </html>
