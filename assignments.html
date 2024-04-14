@@ -1,140 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Welcome to Pero's Academy</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .content-wrap {
-            flex: 1;
-        }
-        .header-container, .container {
-            width: 80%;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-        }
-        .header-container {
-            position: relative;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #007BFF;
-            color: white;
-        }
-        .hamburger {
-            cursor: pointer;
-        }
-        .bar {
-            width: 30px;
-            height: 3px;
-            background-color: white;
-            margin: 6px 0;
-        }
-        .nav-container {
-            display: none;
-            position: absolute;
-            background-color: #006BDD;
-            width: 100%;
-            top: 100%;
-            left: 0;
-            border-radius: 0 0 10px 10px;
-            z-index: 1000;
-        }
-        .nav-container a, .button {
-            color: white;
-            text-decoration: none;
-            display: block;
-            padding: 10px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .nav-container a:hover, .button:hover {
-            background-color: #0056A3;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-        th {
-            background-color: #007BFF;
-            color: white;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #007BFF;
-            color: white;
-            width: 100%;
-            margin-top: 20px;
-            border-radius: 0 0 10px 10px;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assessments | Pero's Academy</title>
+<style>
+    /* General styling */
+    body { font-family: Arial, sans-serif; line-height: 1.6; }
+    .container { width: 80%; margin: auto; overflow: hidden; }
+    header, footer { background: #333; color: #fff; padding: 20px; text-align: center; }
+    
+    /* Section styling */
+    section { padding: 20px; }
+    h2 { color: #333; }
+    
+    /* Table styling */
+    table { width: 100%; border-collapse: collapse; }
+    table, th, td { border: 1px solid #ccc; }
+    th, td { padding: 10px; text-align: left; }
+    th { background-color: #f4f4f4; }
+    .status-not-registered { color: red; }
+
+    /* Footer styling */
+    footer { margin-top: 20px; }
+
+    /* Responsive design adjustments */
+    @media (max-width: 768px) {
+        .container { width: 95%; }
+        /* Add more responsive styles here */
+    }
+
+    /* Accessibility improvements */
+    /* Add ARIA roles and semantic HTML enhancements here */
+
+    /* Dynamic interactivity - JavaScript or backend connections */
+    /* Script to update assignment status dynamically or connect to a backend API */
+</style>
 </head>
 <body>
-    <!-- Header and Navigation -->
-    <div class="content-wrap">
-        <header>
-            <h1>Welcome to Pero's Academy</h1>
-        </header>
-        <div class="hamburger" onclick="toggleNav()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <div class="nav-container" id="navContainer">
-            <a href="assignments.html">Assignments</a>
-            <a href="ref_key.html">Reference Key</a>
-            <a href="contact.html">Contact</a>
-            <a href="faculty.html">Faculty</a>
-            <a href="enrollment-form.html">Enrollment</a>
-            <a href="curriculums.html">Curriculums</a>
-        </div>
-    </div>
+<header>
+    <h1>@Pero's-Academy Assignments Status Report</h1>
+</header>
 
-    <!-- Main Content -->
-    <div class="container">
-        <header>
-            <h2>Welcome to Pero's Academy Assignments</h2>
-        </header>
-        <h3>📚 Current Assignments</h3>
-        <table>
-            <tr>
-                <th>Assignment Name</th>
-                <th>Link</th>
-            </tr>
-            <!-- Add assignment rows here -->
+<div class="container">
+    <!-- Project Description -->
+    <section aria-labelledby="project-description">
+        <h2 id="project-description">Project Description</h2>
+        <p>
+            <!-- Content here -->
+        </p>
+    </section>
+
+    <!-- Features List -->
+    <section aria-labelledby="features-list">
+        <h2 id="features-list">Features</h2>
+        <ul>
+            <!-- List items here -->
+        </ul>
+    </section>
+
+    <!-- Assignment Overview Table -->
+    <section aria-labelledby="assignment-overview">
+        <h2 id="assignment-overview">Assignment Overview</h2>
+        <table aria-describedby="assignment-overview">
+            <!-- Table rows and data here -->
         </table>
-    </div>
+    </section>
 
-    <!-- Footer -->
-    <footer>
-        © 2024 Pero's Academy. All rights reserved.
-    </footer>
+    <!-- Benefits Section -->
+    <section aria-labelledby="benefits-section">
+        <h2 id="benefits-section">Benefits</h2>
+        <p>
+            <!-- Benefits content here -->
+        </p>
+    </section>
 
-    <!-- Toggle Navigation Script -->
-    <script>
-        function toggleNav() {
-            var nav = document.getElementById("navContainer");
-            nav.style.display = nav.style.display === "block" ? "none" : "block";
-        }
-    </script>
+    <!-- Future Enhancements Section -->
+    <section aria-labelledby="future-enhancements">
+        <h2 id="future-enhancements">Future Enhancements</h2>
+        <p>
+            <!-- Future enhancements content here -->
+        </p>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; <span id="year"></span> Pero's Academy. All rights reserved.</p>
+</footer>
+
+<script>
+    // JavaScript for dynamic year update and possibly other dynamic features
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Add more JavaScript here for dynamic status updates, API calls, etc.
+</script>
 </body>
 </html>
